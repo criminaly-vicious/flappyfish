@@ -6,8 +6,23 @@
   <title>FlappyFish</title>
   <script src="phaser.js"></script>
   <style>
-    /* CSS usado apenas para estilizar os botões HTML invisíveis */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
 
+    body {
+      overflow: hidden;
+      background: #00142b;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    /* CSS usado apenas para estilizar os botoes HTML invisiveis */
     .ui-button {
       position: fixed;
       z-index: 1;

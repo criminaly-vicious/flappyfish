@@ -28,11 +28,10 @@ const buttonOverlay = {
 
   init(scene) {
     this.canvas = scene.sys.game.canvas;
-    this.canvas.style.position = "CENTER";
+    this.canvas.style.position = "fixed";
     this.canvas.style.left = "50%";
     this.canvas.style.top = "50%";
     this.canvas.style.transform = "translate(-50%, -50%)";
-    this.canvas.style.zIndex = "2";
 
     if (!this.buttons.start) {
       this.buttons.start = document.getElementById("start-btn");

@@ -1,11 +1,15 @@
+stages:
+  - deploy
+
 pages:
   stage: deploy
+  image: alpine:3.20
   script:
-    - mkdir .public
-    - cp -r * .public
-    - mv .public public
+    - mkdir -p public/assets
+    - cp index.html main.js phaser.js public/
+    - cp -r assets/* public/assets/
   artifacts:
     paths:
       - public
-  only:
-    - main
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
