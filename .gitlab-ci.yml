@@ -1,6 +1,37 @@
 stages:
   - deploy
 
+# Neutraliza jobs injetados por templates globais/Auto DevOps.
+build:
+  stage: deploy
+  rules:
+    - when: never
+
+test:
+  stage: deploy
+  rules:
+    - when: never
+
+code_quality:
+  stage: deploy
+  rules:
+    - when: never
+
+container_scanning:
+  stage: deploy
+  rules:
+    - when: never
+
+semgrep-sast:
+  stage: deploy
+  rules:
+    - when: never
+
+secret_detection:
+  stage: deploy
+  rules:
+    - when: never
+
 pages:
   stage: deploy
   image: alpine:3.20
