@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlappyFish</title>
+  <script src="phaser.js"></script>
+  <style>
+    /* CSS usado apenas para estilizar os botões HTML invisíveis */
+
+    .ui-button {
+      position: fixed;
+      z-index: 1;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      color: transparent;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .ui-button:focus-visible {
+      opacity: 0.15;
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.3);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="start-btn" class="ui-button" aria-label="Iniciar jogo"></button>
+  <button id="restart-btn" class="ui-button" aria-label="Reiniciar jogo"></button>
+  <button id="menu-btn" class="ui-button" aria-label="Voltar ao menu"></button>
+
+  <script src="main.js"></script>
+</body>
+</html>
